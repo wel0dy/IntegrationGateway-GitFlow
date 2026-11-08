@@ -11,3 +11,12 @@ namespace Gateway.Payments
         }
     }
 }
+
+namespace Gateway.Payments
+{
+    /// <summary>Возврат платежа покупателю.</summary>
+    public class RefundService
+    {
+        public bool CanRefund(decimal paid, decimal refund) => refund > 0 && refund <= paid;
+    }
+}
